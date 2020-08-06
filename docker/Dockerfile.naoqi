@@ -1,0 +1,25 @@
+FROM osrf/ros:melodic-desktop-full
+
+LABEL maintainer="Sebastian Höffner <shoeffner@tzi.de>"
+
+ENV ROS_MASTER_URI http://roscore:11311
+
+EXPOSE 9090 11311
+
+# Install dependencies
+# Accept nao-meshes license
+RUN apt-get update \
+    && echo "ros-nao-meshes ros-nao-meshes/accepted-ros-nao-meshes boolean true" | debconf-set-selections \
+    && apt-get install -y \
+        ros-${ROS_DISTRO}-naoqi-driver \
+        ros-${ROS_DISTRO}-nao-meshes \
+        ros-${ROS_DISTRO}-moveit \
+    && apt-get -y clean \
+    && echo "source /opt/ros/${ROS_DISTRO}/setup.bash && source /catkin_ws/devel/setup.bash" >> ${HOME}/.bashrc
+
+# Copy workspace and initialize it
+COPY ros_entrypoint.sh start_after_rosmaster.sh /
+WORKDIR /catkin_ws
+
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["roscore"]

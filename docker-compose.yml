@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+    roscore:
+        image: osrf/ros:melodic-desktop-full
+        command: roscore
+
+    naoqi:
+        build:
+            context: docker
+            dockerfile: Dockerfile.naoqi
+        image: ease:naoqi
+        command: /start_after_rosmaster.sh roslaunch naoqi_driver naoqi_driver.launch nao_ip:=${NAO_IP} roscore_ip:=roscore network_interface:=eth0
+        depends_on:
+            - roscore
+
+    naoqi_status:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile.naoqi_dlu
+        image: ease:naoqi_dlu
+        command: /start_after_rosmaster.sh rosrun ease_dlu_util check_nao.sh
+        depends_on:
+            - roscore
+            - naoqi
+
+    ros1_bridge:
+        image: ros:foxy-ros1-bridge
+        command: ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
+        environment:
+            - ROS_DOMAIN_ID
+            - ROS_MASTER_URI=http://roscore:11311
+            - ROS_HOSTNAME=ros1_bridge
+        depends_on:
+            - roscore
+
+    rosbridge:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile.naoqi_dlu
+        image: ease:naoqi_dlu
+        command: /start_after_rosmaster.sh roslaunch file_server ros_sharp_communication.launch
+        ports:
+            - "9090:9090"
+        depends_on:
+            - roscore
