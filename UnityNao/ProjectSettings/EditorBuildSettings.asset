@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NaoVisualization.unity
+    guid: 38fbee60cc914472bb128b1aaaa7aeb9
   m_configObjects: {}
