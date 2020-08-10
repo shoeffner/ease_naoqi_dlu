@@ -14,11 +14,14 @@ RUN apt-get update \
         ros-${ROS_DISTRO}-naoqi-driver \
         ros-${ROS_DISTRO}-nao-meshes \
         ros-${ROS_DISTRO}-moveit \
+        ros-${ROS_DISTRO}-rosbridge-server \
+        python-pip \
     && apt-get -y clean \
+    && pip install pyyaml \
     && echo "source /opt/ros/${ROS_DISTRO}/setup.bash && source /catkin_ws/devel/setup.bash" >> ${HOME}/.bashrc
 
-# Copy workspace and initialize it
-COPY ros_entrypoint.sh start_after_rosmaster.sh /
+COPY docker/*.sh /
+
 WORKDIR /catkin_ws
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
