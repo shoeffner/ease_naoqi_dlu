@@ -1,0 +1,50 @@
+Node [/naoqi_driver]
+Publications:
+ * /diagnostics [diagnostic_msgs/DiagnosticArray]
+ * /joint_states [sensor_msgs/JointState]
+ * /naoqi_driver/audio [naoqi_bridge_msgs/AudioBuffer]
+ * /naoqi_driver/bumper [naoqi_bridge_msgs/Bumper]
+ * /naoqi_driver/camera/bottom/camera_info [sensor_msgs/CameraInfo]
+ * /naoqi_driver/camera/bottom/image_raw [sensor_msgs/Image]
+ * /naoqi_driver/camera/bottom/image_raw/compressed [sensor_msgs/CompressedImage]
+ * /naoqi_driver/camera/bottom/image_raw/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /naoqi_driver/camera/bottom/image_raw/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /naoqi_driver/camera/bottom/image_raw/theora [theora_image_transport/Packet]
+ * /naoqi_driver/camera/bottom/image_raw/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /naoqi_driver/camera/bottom/image_raw/theora/parameter_updates [dynamic_reconfigure/Config]
+ * /naoqi_driver/camera/front/camera_info [sensor_msgs/CameraInfo]
+ * /naoqi_driver/camera/front/image_raw [sensor_msgs/Image]
+ * /naoqi_driver/camera/front/image_raw/compressed [sensor_msgs/CompressedImage]
+ * /naoqi_driver/camera/front/image_raw/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /naoqi_driver/camera/front/image_raw/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /naoqi_driver/camera/front/image_raw/theora [theora_image_transport/Packet]
+ * /naoqi_driver/camera/front/image_raw/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /naoqi_driver/camera/front/image_raw/theora/parameter_updates [dynamic_reconfigure/Config]
+ * /naoqi_driver/hand_touch [naoqi_bridge_msgs/HandTouch]
+ * /naoqi_driver/head_touch [naoqi_bridge_msgs/HeadTouch]
+ * /naoqi_driver/imu/torso [sensor_msgs/Imu]
+ * /naoqi_driver/info [naoqi_bridge_msgs/StringStamped]
+ * /naoqi_driver/odom [nav_msgs/Odometry]
+ * /naoqi_driver/sonar/left [sensor_msgs/Range]
+ * /naoqi_driver/sonar/right [sensor_msgs/Range]
+ * /rosout [rosgraph_msgs/Log]
+ * /tf [tf2_msgs/TFMessage]
+
+Subscriptions:
+ * /cmd_vel [unknown type]
+ * /joint_angles [unknown type]
+ * /move_base_simple/goal [unknown type]
+ * /speech [unknown type]
+
+Services:
+ * /naoqi_driver/camera/bottom/image_raw/compressed/set_parameters
+ * /naoqi_driver/camera/bottom/image_raw/compressedDepth/set_parameters
+ * /naoqi_driver/camera/bottom/image_raw/theora/set_parameters
+ * /naoqi_driver/camera/front/image_raw/compressed/set_parameters
+ * /naoqi_driver/camera/front/image_raw/compressedDepth/set_parameters
+ * /naoqi_driver/camera/front/image_raw/theora/set_parameters
+ * /naoqi_driver/get_language
+ * /naoqi_driver/get_loggers
+ * /naoqi_driver/get_robot_config
+ * /naoqi_driver/set_language
+ * /naoqi_driver/set_logger_level
