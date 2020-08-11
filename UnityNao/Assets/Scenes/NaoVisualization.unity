@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &30864577
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &31376830
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LHipPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &56690922
@@ -939,11 +940,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00221, y: -0.05373, z: 0.00138}
   InertiaTensor: {x: 0.00028645352, y: 0.00046573245, z: 0.0005241142}
   InertiaTensorRotation: {x: 0.717629, y: -0.68538165, z: 0.085995585, w: 0.08868686}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &56690923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,6 +1142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RElbowYaw
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &67599958
@@ -1149,11 +1157,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0, y: -0.00014, z: -0.02744}
   InertiaTensor: {x: 0.0000055920054, y: 0.000026617883, z: 0.00002763329}
   InertiaTensorRotation: {x: -0.49618167, y: 0.49716598, z: 0.50291824, w: 0.50368947}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &67599959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,6 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFoot/FSR/RearLeft_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &75733261
@@ -1345,11 +1360,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &75733262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1721,6 +1742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: HeadYaw
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &95926576
@@ -1735,11 +1757,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0, y: -0.02742, z: -0.00001}
   InertiaTensor: {x: 0.0000055335927, y: 0.00002655839, z: 0.000027565538}
   InertiaTensorRotation: {x: 0.5002101, y: -0.49900946, z: -0.49978784, w: 0.50099057}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &95926577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &110649774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +2019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &113771596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RHipRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &113771602
@@ -2125,11 +2154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00029, y: -0.00515, z: -0.01549}
   InertiaTensor: {x: 0.000022932101, y: 0.00005793183, z: 0.00006351126}
   InertiaTensorRotation: {x: 0.064537555, y: 0.70861983, z: 0.065466344, w: 0.6995764}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &113771603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2330,7 +2365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &139934138
 GameObject:
   m_ObjectHideFlags: 8
@@ -2419,7 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &144328693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &149830216
 GameObject:
   m_ObjectHideFlags: 8
@@ -2553,7 +2588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &156337519
 GameObject:
   m_ObjectHideFlags: 8
@@ -2687,7 +2722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &191829544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFoot/FSR/FrontLeft_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &191829548
@@ -2766,11 +2802,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &191829549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3555,6 +3597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RAnklePitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &231392836
@@ -3569,11 +3612,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00029, y: 0.00685, z: 0.00045}
   InertiaTensor: {x: 0.000031417516, y: 0.00005565324, z: 0.00006799415}
   InertiaTensorRotation: {x: 0.06376073, y: 0.7051298, z: 0.06394029, w: 0.7033051}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &231392837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3906,6 +3955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LThumb2
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &260134351
@@ -3920,11 +3970,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &260134352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4098,7 +4154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &281629969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +4590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger21
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &312055731
@@ -4548,11 +4605,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &312055732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4928,7 +4991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &341143272
 GameObject:
   m_ObjectHideFlags: 8
@@ -5076,6 +5139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RThumb1
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &343860251
@@ -5090,11 +5154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &343860252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5164,7 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &350973753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,6 +5421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFoot/FSR/FrontRight_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &363673407
@@ -5365,11 +5436,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &363673408
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5814,6 +5891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RShoulderRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &398725533
@@ -5828,11 +5906,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00563, y: 0.0033, z: 0.02455}
   InertiaTensor: {x: 0.00008561544, y: 0.00025515014, z: 0.00028793444}
   InertiaTensorRotation: {x: -0.028110284, y: 0.801328, z: -0.03807884, w: 0.5963499}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &398725534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6468,6 +6552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RShoulderPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &460909139
@@ -6482,11 +6567,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.02663, y: 0.00014, z: -0.00165}
   InertiaTensor: {x: 0.000013851535, y: 0.00003116115, z: 0.000033004908}
   InertiaTensorRotation: {x: -0.020357134, y: -0.70946234, z: -0.7037393, w: 0.031619836}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &460909140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6772,6 +6863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LElbowRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &465412734
@@ -6786,11 +6878,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00281, y: 0.00076, z: 0.02556}
   InertiaTensor: {x: 0.00002376316, y: 0.000036082954, z: 0.00003918298}
   InertiaTensorRotation: {x: 0.03928654, y: 0.77721673, z: 0.049616583, w: 0.6260424}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &465412735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6906,7 +7004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &469268800
 GameObject:
   m_ObjectHideFlags: 8
@@ -7134,7 +7232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &489445097
 GameObject:
   m_ObjectHideFlags: 8
@@ -7665,7 +7763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &556102352
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,6 +7889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LAnkleRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &556102358
@@ -7805,11 +7904,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.0033, y: -0.03239, z: 0.02542}
   InertiaTensor: {x: 0.00009754807, y: 0.00037015195, z: 0.00041958506}
   InertiaTensorRotation: {x: 0.49601454, y: -0.49402183, z: -0.51994914, w: -0.48945382}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &556102359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8225,6 +8330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFoot/FSR/FrontLeft_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &587532539
@@ -8239,11 +8345,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &587532540
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8730,7 +8842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &624929712
 GameObject:
   m_ObjectHideFlags: 8
@@ -8819,7 +8931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &632349267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9084,7 +9196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &670884402
 GameObject:
   m_ObjectHideFlags: 0
@@ -9129,7 +9241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &686725531
 GameObject:
   m_ObjectHideFlags: 0
@@ -10027,6 +10139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LKneePitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &758686639
@@ -10041,11 +10154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00225, y: -0.04936, z: 0.00453}
   InertiaTensor: {x: 0.00018267416, y: 0.00041275902, z: 0.00047357872}
   InertiaTensorRotation: {x: 0.6936817, y: -0.7182225, z: -0.018764818, w: -0.05108939}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &758686640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10115,7 +10234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &762529617
 GameObject:
   m_ObjectHideFlags: 8
@@ -10371,6 +10490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RWristYaw
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &774565386
@@ -10385,11 +10505,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00088, y: 0.00308, z: 0.03434}
   InertiaTensor: {x: 0.000066613735, y: 0.00013171067, z: 0.00013930729}
   InertiaTensorRotation: {x: -0.015869332, y: 0.7625885, z: -0.021146184, w: 0.6463433}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &774565387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10770,6 +10896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger12
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &798744448
@@ -10784,11 +10911,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &798744449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10978,7 +11111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &821447321
 GameObject:
   m_ObjectHideFlags: 0
@@ -11335,6 +11468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger21
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &833684363
@@ -11349,11 +11483,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &833684364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11520,7 +11660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &851499234
 GameObject:
   m_ObjectHideFlags: 0
@@ -11585,6 +11725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFoot/FSR/RearRight_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &851499238
@@ -11599,11 +11740,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &851499239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11752,6 +11899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LHipYawPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &871962217
@@ -11766,11 +11914,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.01114, y: 0.02661, z: -0.00781}
   InertiaTensor: {x: 0.00002322391, y: 0.000045879253, z: 0.000051641437}
   InertiaTensorRotation: {x: 0.61964315, y: -0.3620469, z: -0.62848294, w: -0.29995608}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &871962218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12172,6 +12326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LElbowYaw
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &909014884
@@ -12186,11 +12341,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0, y: -0.00014, z: -0.02744}
   InertiaTensor: {x: 0.0000055920054, y: 0.000026617883, z: 0.00002763329}
   InertiaTensorRotation: {x: -0.49618167, y: 0.49716598, z: 0.50291824, w: 0.50368947}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &909014885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12508,6 +12669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LShoulderRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &943135827
@@ -12522,11 +12684,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00563, y: 0.0033, z: 0.02455}
   InertiaTensor: {x: 0.00008258183, y: 0.00024289364, z: 0.00027822953}
   InertiaTensorRotation: {x: -0.033252332, y: 0.6588838, z: -0.029264426, w: 0.7509394}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &943135828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12660,6 +12828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFoot/FSR/FrontRight_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &951577998
@@ -12674,11 +12843,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &951577999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12879,7 +13054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &972474738
 GameObject:
   m_ObjectHideFlags: 0
@@ -12924,7 +13099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &974813969
 GameObject:
   m_ObjectHideFlags: 8
@@ -13101,7 +13276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &992845510
 GameObject:
   m_ObjectHideFlags: 8
@@ -13260,6 +13435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: HeadPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &995602924
@@ -13274,11 +13450,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0, y: 0.05258, z: -0.00112}
   InertiaTensor: {x: 0.00081103353, y: 0.0009579522, z: 0.0009905923}
   InertiaTensorRotation: {x: -0.033014115, y: -0.6641456, z: -0.7419181, w: -0.08589713}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &995602925
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13498,6 +13680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger12
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1013992955
@@ -13512,11 +13695,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1013992956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13813,7 +14002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1001 &1055301983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14412,6 +14601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RElbowRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1111841543
@@ -14426,11 +14616,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00281, y: 0.00076, z: 0.02556}
   InertiaTensor: {x: 0.000023945684, y: 0.00003595858, z: 0.000039232644}
   InertiaTensorRotation: {x: 0.028330063, y: 0.6254359, z: 0.02289321, w: 0.779425}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1111841544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14572,11 +14768,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0, y: 0.04342, z: -0.00413}
   InertiaTensor: {x: 0.001591115, y: 0.002882951, z: 0.0030854438}
   InertiaTensorRotation: {x: 0.71356875, y: -0.6995136, z: 0.018175125, w: -0.034205634}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1117559412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14634,7 +14836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1122148108
 GameObject:
   m_ObjectHideFlags: 0
@@ -14679,7 +14881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1136339626
 GameObject:
   m_ObjectHideFlags: 0
@@ -14725,7 +14927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1137028813
 GameObject:
   m_ObjectHideFlags: 0
@@ -14812,6 +15014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger13
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1137028817
@@ -14826,11 +15029,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1137028818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15174,7 +15383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1196373017
 GameObject:
   m_ObjectHideFlags: 0
@@ -15770,6 +15979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger11
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1238702753
@@ -15784,11 +15994,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1238702754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15992,7 +16208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 0
+  GeometryType: 0
 --- !u!1 &1256110728
 GameObject:
   m_ObjectHideFlags: 0
@@ -16112,6 +16328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RHipPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1256110734
@@ -16126,11 +16343,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00221, y: -0.05373, z: 0.00138}
   InertiaTensor: {x: 0.00028651784, y: 0.00046680155, z: 0.00052512065}
   InertiaTensorRotation: {x: 0.6869409, y: -0.71600163, z: 0.08841483, w: 0.0873878}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1256110735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16544,6 +16767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RKneePitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1299956228
@@ -16558,11 +16782,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00225, y: -0.04936, z: 0.00453}
   InertiaTensor: {x: 0.00017908389, y: 0.00041231685, z: 0.00047621236}
   InertiaTensorRotation: {x: 0.71640944, y: -0.6944446, z: -0.060877703, w: -0.028252892}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1299956229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16959,6 +17189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LHand
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1318082537
@@ -16973,11 +17204,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1318082538
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17559,6 +17796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LShoulderPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1338466718
@@ -17573,11 +17811,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.02663, y: 0.00014, z: -0.00165}
   InertiaTensor: {x: 0.000013851535, y: 0.00003116115, z: 0.000033004908}
   InertiaTensorRotation: {x: 0.020357134, y: -0.70946234, z: -0.7037393, w: -0.031619836}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1338466719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18294,6 +18538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RHand
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1406309988
@@ -18308,11 +18553,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1406309989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18702,7 +18953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1436466037
 GameObject:
   m_ObjectHideFlags: 8
@@ -18916,6 +19167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LWristYaw
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1453897908
@@ -18930,11 +19182,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.00088, y: 0.00308, z: 0.03434}
   InertiaTensor: {x: 0.000068519366, y: 0.00013163083, z: 0.0001374815}
   InertiaTensorRotation: {x: -0.014339453, y: 0.70813096, z: -0.017133666, w: 0.70572764}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1453897909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19004,7 +19262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1459431381
 GameObject:
   m_ObjectHideFlags: 8
@@ -19135,6 +19393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger23
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1461238268
@@ -19149,11 +19408,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1461238269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19281,6 +19546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger23
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1464333261
@@ -19295,11 +19561,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1464333262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19475,7 +19747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1483110655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19833,7 +20105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1495305489
 GameObject:
   m_ObjectHideFlags: 0
@@ -20370,6 +20642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LThumb1
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1520881018
@@ -20384,11 +20657,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1520881019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20547,7 +20826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1542276125
 GameObject:
   m_ObjectHideFlags: 8
@@ -20737,6 +21016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger11
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1547888712
@@ -20751,11 +21031,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1547888713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20825,7 +21111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1558645503
 GameObject:
   m_ObjectHideFlags: 8
@@ -20978,6 +21264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFoot/FSR/RearLeft_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1571952268
@@ -20992,11 +21279,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1571952269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21324,6 +21617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LAnklePitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1591179945
@@ -21338,11 +21632,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00029, y: 0.00685, z: 0.00045}
   InertiaTensor: {x: 0.000031422263, y: 0.000055601642, z: 0.00006794939}
   InertiaTensorRotation: {x: 0.06384591, y: 0.7036442, z: 0.06375756, w: 0.70480037}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1591179946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21487,6 +21787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LHipRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1597071690
@@ -21501,11 +21802,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.00029, y: -0.00515, z: -0.01549}
   InertiaTensor: {x: 0.00002291842, y: 0.00005793679, z: 0.00006351399}
   InertiaTensorRotation: {x: 0.06564893, y: 0.69919455, z: 0.064845294, w: 0.7089516}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1597071691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21936,6 +22243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RThumb2
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1618801813
@@ -21950,11 +22258,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1618801814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22160,7 +22474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1640238391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22474,7 +22788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &1646486097
 GameObject:
   m_ObjectHideFlags: 8
@@ -23367,7 +23681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1747249775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24435,7 +24749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1826444669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25245,6 +25559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger13
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1868528915
@@ -25259,11 +25574,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1868528916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25484,7 +25805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1932155986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25690,7 +26011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &1950632993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25917,6 +26238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RHipYawPitch
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1959344666
@@ -25931,11 +26253,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: -0.01114, y: 0.02661, z: -0.00781}
   InertiaTensor: {x: 0.000031589545, y: 0.000046085886, z: 0.000060002978}
   InertiaTensorRotation: {x: -0.34335756, y: 0.6274558, z: 0.24835806, w: 0.6532405}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1959344667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26157,6 +26485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFoot/FSR/RearRight_sensor_fixedjoint
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &1975341246
@@ -26171,11 +26500,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1975341247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28269,7 +28604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &2021660544
 GameObject:
   m_ObjectHideFlags: 0
@@ -28359,7 +28694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &2043886326
 GameObject:
   m_ObjectHideFlags: 0
@@ -28826,6 +29161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RFinger22
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &2077617509
@@ -28840,11 +29176,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2077617510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29018,6 +29360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: LFinger22
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &2092112624
@@ -29032,11 +29375,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0, y: 0, z: 0}
   InertiaTensor: {x: 0.000001, y: 0.000001, z: 0.000001}
   InertiaTensorRotation: {x: 0, y: -0, z: -0, w: 1}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2092112625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29106,7 +29455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1001 &2102519511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29660,6 +30009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JointName: RAnkleRoll
+  _jointType: 0
   EffortLimit: 1000
   VelocityLimit: 1000
 --- !u!114 &2115996357
@@ -29674,11 +30024,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631001c063f69d4495bca90731abab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}
   DisplayInertiaGizmo: 0
-  UseUrdfData: 1
+  rigidbodyDataSource: 0
+  Mass: 0
   CenterOfMass: {x: 0.0033, y: -0.03239, z: 0.02542}
   InertiaTensor: {x: 0.0000974269, y: 0.00036926687, z: 0.00041886047}
   InertiaTensorRotation: {x: -0.49357966, y: 0.49680862, z: 0.48894584, w: 0.52008873}
+  UrdfMass: 0
+  UrdfCenterOfMass: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensor: {x: 0, y: 0, z: 0}
+  UrdfInertiaTensorRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2115996358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29791,7 +30147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c8ba1123c5f949b20e50d5dd6afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geometryType: 3
+  GeometryType: 0
 --- !u!1 &2139977337
 GameObject:
   m_ObjectHideFlags: 8
