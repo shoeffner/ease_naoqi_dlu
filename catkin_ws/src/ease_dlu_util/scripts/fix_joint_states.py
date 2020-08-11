@@ -22,13 +22,11 @@ def bridge(publisher, message):
     valid = ~np.any(nan_mask, axis=0)
 
     # filter all valid points
-
     message.name = list(gather(message.name, valid))
     message.position = list(gather(message.position, valid))
     message.velocity = list(gather(message.velocity, valid))
     message.effort = list(gather(message.effort, valid))
 
-    rospy.loginfo("%s", message)
     publisher.publish(message)
 
 
