@@ -11,11 +11,12 @@ EXPOSE 9090 11311
 RUN apt-get update \
     && echo "ros-nao-meshes ros-nao-meshes/accepted-ros-nao-meshes boolean true" | debconf-set-selections \
     && apt-get install -y \
-        ros-${ROS_DISTRO}-naoqi-driver \
+        # ros-${ROS_DISTRO}-naoqi-driver \
         ros-${ROS_DISTRO}-nao-meshes \
         ros-${ROS_DISTRO}-moveit \
         ros-${ROS_DISTRO}-rosbridge-server \
         python-pip \
+        python-catkin-tools \
     && apt-get -y clean \
     && pip install pyyaml \
     && echo "source /opt/ros/${ROS_DISTRO}/setup.bash && source /catkin_ws/devel/setup.bash" >> ${HOME}/.bashrc

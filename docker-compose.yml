@@ -4,12 +4,12 @@ services:
     roscore:
         image: osrf/ros:melodic-desktop-full
         command: roscore
+        ports:
+            - "11311:11311"
 
     naoqi_driver:
-        build:
-            context: .
-            dockerfile: docker/Dockerfile.naoqi
-        image: ease:naoqi
+        build: .
+        image: ease:naoqi_dlu
         command: /start_after_rosmaster.sh roslaunch naoqi_driver naoqi_driver.launch nao_ip:=${NAO_IP} roscore_ip:=roscore network_interface:=eth0
         depends_on:
             - roscore
@@ -27,6 +27,19 @@ services:
         command: /start_after_rosmaster.sh rosrun ease_dlu_util check_nao.sh
         depends_on:
             - naoqi_driver
+
+    rqt:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile.naoqi
+        image: ease:naoqi
+        command: /start_after_rosmaster.sh rqt
+        environment:
+            - "DISPLAY=${IP}:0"
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+        depends_on:
+            - roscore
 
     ros1_bridge:
         image: ros:foxy-ros1-bridge
