@@ -14,3 +14,9 @@
     local-name: panda_moveit_config
     uri: https://github.com/ros-planning/panda_moveit_config.git
     version: melodic-devel
+
+# Dependencies -- needed?
+# - git:
+#     local-name: naoqi_bridge_msgs
+#     uri: https://github.com/ros-naoqi/naoqi_bridge_msgs.git
+#     version: master

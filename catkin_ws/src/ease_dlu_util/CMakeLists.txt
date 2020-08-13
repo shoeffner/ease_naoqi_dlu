@@ -7,7 +7,7 @@ project(ease_dlu_util)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS rospy)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -188,10 +188,16 @@ include_directories(
 # )
 
 install(PROGRAMS
-    scripts/check_nao.sh
-    scripts/fix_joint_states.py
+    scripts/check_nao
+    scripts/fix_joint_states
+    scripts/speech_recognition
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+# Download deepspeech models
+set(DEEPSPEECH_VERSION 0.8.1)
+file(DOWNLOAD https://github.com/mozilla/DeepSpeech/releases/download/v${DEEPSPEECH_VERSION}/deepspeech-${DEEPSPEECH_VERSION}-models.pbmm ${CATKIN_PACKAGE_SHARE_DESTINATION}/deepspeech.pbmm)
+file(DOWNLOAD https://github.com/mozilla/DeepSpeech/releases/download/v${DEEPSPEECH_VERSION}/deepspeech-${DEEPSPEECH_VERSION}-models.scorer ${CATKIN_PACKAGE_SHARE_DESTINATION}/deepspeech.scorer)
 
 #############
 ## Testing ##

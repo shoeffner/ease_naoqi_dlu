@@ -1,6 +1,14 @@
-FROM ease:naoqi
+FROM ease/naoqi:latest
 
 LABEL maintainer="Sebastian Höffner <shoeffner@tzi.de>"
+
+RUN apt-get update \
+    && apt-get install -y \
+        # For deepspeech \
+        python3-pip \
+        libsox-dev \
+    && python3 -m pip install deepspeech==0.8.1 \
+    && python -m pip install soundfile
 
 # Copy workspace and initialize it
 COPY catkin_ws/src /catkin_ws/src

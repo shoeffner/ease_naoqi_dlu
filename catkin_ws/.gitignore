@@ -1,4 +1,11 @@
 install/
+.catkin_tools
+src/*
+!src/.rosinstall
+!src/CMakeLists.txt
+!src/ease_dlu_util
+!src/ease_dlu_util/
+
 # Created by https://www.toptal.com/developers/gitignore/api/ros
 # Edit at https://www.toptal.com/developers/gitignore?templates=ros
 

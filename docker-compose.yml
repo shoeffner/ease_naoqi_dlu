@@ -1,6 +1,18 @@
 version: "3.7"
 
 services:
+    ease_naoqi_builder:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile.naoqi
+        image: ease/naoqi:latest
+        command: echo "Builder, exiting."
+
+    ease_naoqi_dlu_builder:
+        build: .
+        image: ease/naoqi_dlu:latest
+        command: echo "Builder, exiting."
+
     roscore:
         image: osrf/ros:melodic-desktop-full
         command: roscore
@@ -8,31 +20,25 @@ services:
             - "11311:11311"
 
     naoqi_driver:
-        build: .
-        image: ease:naoqi_dlu
+        image: ease/naoqi_dlu
         command: /start_after_rosmaster.sh roslaunch naoqi_driver naoqi_driver.launch nao_ip:=${NAO_IP} roscore_ip:=roscore network_interface:=eth0
         depends_on:
             - roscore
 
     naoqi:
-        build: .
-        image: ease:naoqi_dlu
-        command: /start_after_rosmaster.sh rosrun ease_dlu_util fix_joint_states.py
+        image: ease/naoqi_dlu
+        command: /start_after_rosmaster.sh rosrun ease_dlu_util fix_joint_states
         depends_on:
             - naoqi_driver
 
     naoqi_status:
-        build: .
-        image: ease:naoqi_dlu
-        command: /start_after_rosmaster.sh rosrun ease_dlu_util check_nao.sh
+        image: ease/naoqi_dlu
+        command: /start_after_rosmaster.sh rosrun ease_dlu_util check_nao
         depends_on:
             - naoqi_driver
 
     rqt:
-        build:
-            context: .
-            dockerfile: docker/Dockerfile.naoqi
-        image: ease:naoqi
+        image: ease/naoqi
         command: /start_after_rosmaster.sh rqt
         environment:
             - "DISPLAY=${IP}:0"
@@ -52,10 +58,25 @@ services:
             - roscore
 
     rosbridge:
-        build: .
-        image: ease:naoqi_dlu
+        image: ease/naoqi_dlu
         command: /start_after_rosmaster.sh roslaunch file_server ros_sharp_communication.launch
         ports:
             - "9090:9090"
+        depends_on:
+            - roscore
+
+    develop:
+        image: ease/naoqi_dlu
+        command: /start_after_rosmaster.sh rostopic list
+        volumes:
+            - ./catkin_ws:/catkin_ws
+        depends_on:
+            - roscore
+
+    rosbag:
+        image: ease/naoqi_dlu
+        command: /start_after_rosmaster.sh rosbag play -l /catkin_ws/bags/speechtest.bag
+        volumes:
+            - ./catkin_ws:/catkin_ws
         depends_on:
             - roscore

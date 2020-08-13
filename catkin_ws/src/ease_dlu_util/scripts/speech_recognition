@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+import os
+import struct
+import rospy
+from naoqi_bridge_msgs.msg import AudioBuffer
+import subprocess
+import shlex
+import webrtcvad
+import soundfile
+import tempfile
+import numpy as np
+import Queue
+
+
+MODEL_PATH = os.environ.get('DEEPSPEECH_MODEL_PATH', '/catkin_ws/devel/share/ease_dlu_util')
+DEEPSPEECH_ARGS = shlex.split("deepspeech --model %s/deepspeech.pbmm --scorer %s/deepspeech.scorer --audio" % (MODEL_PATH, MODEL_PATH))
+
+# Channels are stored as bytes, but kept constant for NAO
+# AudioBuffer.CHANNEL_
+#        REAR_LEFT REAR_RIGHT FRONT_LEFT FRONT_RIGHT
+# Value  \x03      \x05       \x00       \x02
+# Index  0         1          2          3
+# Thus, CHANNEL = 1 would be REAR_RIGHT, etc.
+CHANNEL = 2
+
+FRAME_DURATION = 10  # ms
+SAMPLE_RATE = 48000  # message.frequency, but constant
+VAD_SAMPLES = SAMPLE_RATE * FRAME_DURATION / 1000
+VAD_STRUCT = 'h' * VAD_SAMPLES
+
+
+def write_wav(file_obj, audio, sample_rate):
+    audio = np.array(audio, dtype=np.int16)
+    # TODO(shoeffner): Determine channels from audio source
+    with soundfile.SoundFile(file_obj, mode='x', samplerate=sample_rate, channels=1) as sf:
+        for val in audio:
+            sf.write(val)
+
+
+def transcribe_audio(audio, sample_rate):
+    with tempfile.NamedTemporaryFile(suffix='.wav') as ntf:
+        write_wav(ntf, audio, sample_rate)
+        proc = subprocess.Popen(DEEPSPEECH_ARGS + [ntf.name],
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE)
+        out, err = proc.communicate()
+    return out.strip()
+
+
+recorded = tuple()
+remainder = tuple()
+vad = webrtcvad.Vad(0)
+
+
+def receive(message):
+    global recorded, remainder
+
+    # select channel data (interlaced data)
+    # TODO(shoeffner): What about other channels?
+    audio = message.data[CHANNEL::len(message.channelMap)]
+
+    # prepend remainder from last message
+    audio = remainder + audio
+
+    # slice audio until nothing is left
+    while audio:
+        frame, audio = audio[:VAD_SAMPLES], audio[VAD_SAMPLES:]
+
+        # if there is only remainder, keep it for the next message
+        if len(frame) != VAD_SAMPLES:
+            remainder = frame
+            break
+
+        # record speech, reset once no speech is detected and get result
+        # TODO(shoeffner): Record at least N seconds, or allow certain number
+        # of "non-speech" frames
+        # TODO(shoeffner): Stop after at most M seconds
+        # TODO(shoeffner): do speech inference async
+        bytes_frame = struct.pack(VAD_STRUCT, *frame)
+        if vad.is_speech(bytes_frame, SAMPLE_RATE):
+            if not recorded:  # recorded is empty, starting recording
+                rospy.loginfo('Voice activity detected, starting recording.')
+            recorded += frame
+        elif recorded:  # no longer voice detected, start transcribing
+            rospy.loginfo('Stopping recording.')
+            result = transcribe_audio(recorded, SAMPLE_RATE)
+            if result:
+                rospy.loginfo('Result: %s', result)
+            else:
+                rospy.logerr('No speech recognized.')
+            recorded = tuple()
+
+
+def main():
+    rospy.Subscriber('naoqi_driver/audio', AudioBuffer, receive)
+    rospy.init_node('speech_recognition', anonymous=True)
+    rospy.spin()
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass
